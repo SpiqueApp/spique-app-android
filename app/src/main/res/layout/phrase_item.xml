@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="com.aaron.spique.ui.phraselist.ui.view.phraserecyclerview.PhraseRecyclerAdapter.Listener" />
+        <variable
+            name="model"
+            type="com.aaron.spique.ui.phraselist.ui.view.phraserecyclerview.PhraseItemUiState" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@{model.color}"
+        app:cardCornerRadius="8dp"
+        tools:cardBackgroundColor="@color/tile_blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@{model.phrase}"
+                android:textColor="@color/white"
+                android:onClick="@{() -> listener.onItemClicked(model)}"
+                android:gravity="bottom"
+                android:layout_margin="8dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="help" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

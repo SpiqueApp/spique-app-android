@@ -1,0 +1,520 @@
+[
+  {
+    "id": "001",
+    "text": "I'm hungry",
+    "color": "orange",
+    "tags": ["reaction"],
+    "emoji": "🍔"
+  },
+  {
+    "id": "002",
+    "text": "I'm thirsty",
+    "color": "blue",
+    "tags": ["reaction"],
+    "emoji": "🥤"
+  },
+  {
+    "id": "003",
+    "text": "I'm full",
+    "color": "red",
+    "tags": ["reaction"],
+    "emoji": "🍽️"
+  },
+  {
+    "id": "004",
+    "text": "I'm finished",
+    "color": "green",
+    "tags": ["reaction"],
+    "emoji": "🏁"
+  },
+  {
+    "id": "005",
+    "text": "Incline my bed",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🛏️"
+  },
+  {
+    "id": "006",
+    "text": "Decline my bed",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🛏️"
+  },
+  {
+    "id": "007",
+    "text": "I want to sit up",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🪑"
+  },
+  {
+    "id": "008",
+    "text": "I want to stand up",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🧍‍♂️"
+  },
+  {
+    "id": "009",
+    "text": "I want to sit down",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🪑"
+  },
+  {
+    "id": "010",
+    "text": "I want to lay down",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🛌"
+  },
+  {
+    "id": "011",
+    "text": "I need to use the rest room",
+    "color": "red",
+    "tags": ["request", "urgent"],
+    "emoji": "🚻"
+  },
+  {
+    "id": "012",
+    "text": "I need my medicine",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "💊"
+  },
+  {
+    "id": "013",
+    "text": "I need to see a nurse",
+    "color": "red",
+    "tags": ["request", "urgent"],
+    "emoji": "👩‍⚕️"
+  },
+  {
+    "id": "014",
+    "text": "I need to see a doctor",
+    "color": "red",
+    "tags": ["request", "urgent"],
+    "emoji": "👨‍⚕️"
+  },
+  {
+    "id": "015",
+    "text": "Please?",
+    "color": "purple",
+    "tags": ["request", "question"],
+    "emoji": "🥺"
+  },
+  {
+    "id": "016",
+    "text": "Thank you",
+    "color": "green",
+    "tags": ["affirmation", "positive", "greeting"],
+    "emoji": "🙏"
+  },
+  {
+    "id": "017",
+    "text": "Stop",
+    "color": "red",
+    "tags": ["request", "urgent", "reaction", "negative"],
+    "emoji": "🛑"
+  },
+  {
+    "id": "018",
+    "text": "Go",
+    "color": "green",
+    "tags": ["request", "reaction", "positive"],
+    "emoji": "➡️"
+  },
+  {
+    "id": "019",
+    "text": "Too slow",
+    "color": "yellow",
+    "tags": ["request", "reaction"],
+    "emoji": "🐢"
+  },
+  {
+    "id": "020",
+    "text": "Too fast",
+    "color": "green",
+    "tags": ["request", "reaction"],
+    "emoji": "🐇"
+  },
+  {
+    "id": "021",
+    "text": "Slower",
+    "color": "yellow",
+    "tags": ["reqeust", "reaction"],
+    "emoji": "🐢"
+  },
+  {
+    "id": "022",
+    "text": "Faster",
+    "color": "green",
+    "tags": ["request", "reaction"],
+    "emoji": "🐇"
+  },
+  {
+    "id": "023",
+    "text": "Too Cold",
+    "color": "blue",
+    "tags": ["request", "reaction"],
+    "emoji": "🥶"
+  },
+  {
+    "id": "024",
+    "text": "Too Hot",
+    "color": "red",
+    "tags": ["request", "reaction"],
+    "emoji": "🥵"
+  },
+  {
+    "id": "025",
+    "text": "Cooler",
+    "color": "blue",
+    "tags": ["request", "reaction"],
+    "emoji": "❄️"
+  },
+  {
+    "id": "026",
+    "text": "Hotter",
+    "color": "red",
+    "tags": ["request", "reaction"],
+    "emoji": "🔥"
+  },
+  {
+    "id": "027",
+    "text": "Just right",
+    "color": "green",
+    "tags": ["reaction", "affirmation", "positive"],
+    "emoji": "👍"
+  },
+  {
+    "id": "028",
+    "text": "Better",
+    "color": "green",
+    "tags": ["reaction", "affirmation", "positive"],
+    "emoji": "👌"
+  },
+  {
+    "id": "029",
+    "text": "That hurts",
+    "color": "red",
+    "tags": ["reaction", "negative", "feeling", "urgent"],
+    "emoji": "🤕"
+  },
+  {
+    "id": "030",
+    "text": "Ouch",
+    "color": "red",
+    "tags": ["reaction", "negative", "urgent"],
+    "emoji": "💥"
+  },
+  {
+    "id": "031",
+    "text": "Have a good day",
+    "color": "blue",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "032",
+    "text": "Good Morning",
+    "color": "green",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "033",
+    "text": "Good Afternoon",
+    "color": "yellow",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "034",
+    "text": "Good Evening",
+    "color": "red",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "035",
+    "text": "Good Night",
+    "color": "blue",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "036",
+    "text": "I'm tired",
+    "color": "blue",
+    "tags": ["reaction"],
+    "emoji": "🥱"
+  },
+  {
+    "id": "037",
+    "text": "I'm awake",
+    "color": "green",
+    "tags": ["reaction"],
+    "emoji": "☀️"
+  },
+  {
+    "id": "038",
+    "text": "Hello",
+    "color": "green",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "039",
+    "text": "Goodbye",
+    "color": "red",
+    "tags": ["greeting"],
+    "emoji": "👋"
+  },
+  {
+    "id": "040",
+    "text": "What?",
+    "color": "purple",
+    "tags": ["question"],
+    "emoji": "❔"
+  },
+  {
+    "id": "041",
+    "text": "Where?",
+    "color": "purple",
+    "tags": ["question"],
+    "emoji": "❔"
+  },
+  {
+    "id": "042",
+    "text": "How?",
+    "color": "purple",
+    "tags": ["question"],
+    "emoji": "❔"
+  },
+  {
+    "id": "043",
+    "text": "Help",
+    "color": "yellow",
+    "tags": ["urgent"],
+    "emoji": "🆘"
+  },
+  {
+    "id": "044",
+    "text": "I love you",
+    "color": "pink",
+    "tags": ["feeling", "reaction", "greeting"],
+    "emoji": "❤️"
+  },
+  {
+    "id": "045",
+    "text": "I'm happy",
+    "color": "green",
+    "tags": ["feeling", "reaction", "positive"],
+    "emoji": "😀"
+  },
+  {
+    "id": "046",
+    "text": "I'm surprised",
+    "color": "yellow",
+    "tags": ["feeling", "response", "reaction", "positive"],
+    "emoji": "😲"
+  },
+  {
+    "id": "047",
+    "text": "I'm sad",
+    "color": "gray",
+    "tags": ["feeling", "reaction", "negative"],
+    "emoji": "😥"
+  },
+  {
+    "id": "048",
+    "text": "I'm mad",
+    "color": "red",
+    "tags": ["feeling", "reaction", "negative"],
+    "emoji": "😡"
+  },
+  {
+    "id": "049",
+    "text": "I'm upset",
+    "color": "red",
+    "tags": ["feeling", "reaction", "negative"],
+    "emoji": "🙁"
+  },
+  {
+    "id": "050",
+    "text": "That's funny",
+    "color": "green",
+    "tags": ["reaction"],
+    "emoji": "😄"
+  },
+  {
+    "id": "051",
+    "text": "Really?",
+    "color": "purple",
+    "tags": ["question"],
+    "emoji": "❔"
+  },
+  {
+    "id": "052",
+    "text": "Okay",
+    "color": "green",
+    "tags": ["reaction", "affirmation", "positive"],
+    "emoji": "👌"
+  },
+  {
+    "id": "053",
+    "text": "Yes",
+    "color": "green",
+    "tags": ["response", "positive"],
+    "emoji": "👍"
+  },
+  {
+    "id": "054",
+    "text": "No",
+    "color": "red",
+    "tags": ["response", "negative"],
+    "emoji": "👎"
+  },
+  {
+    "id": "055",
+    "text": "I don't know",
+    "color": "yellow",
+    "tags": ["response"],
+    "emoji": "🤷‍♂️"
+  },
+  {
+    "id": "056",
+    "text": "I'm not sure",
+    "color": "yellow",
+    "tags": ["response"],
+    "emoji": "🤔"
+  },
+  {
+    "id": "057",
+    "text": "Good",
+    "color": "green",
+    "tags": ["response", "positive"],
+    "emoji": "✅"
+  },
+  {
+    "id": "058",
+    "text": "Bad",
+    "color": "red",
+    "tags": ["response", "negative"],
+    "emoji": "⛔"
+  },
+  {
+    "id": "059",
+    "text": "Turn on the lights",
+    "color": "yellow",
+    "tags": ["request", "positive"],
+    "emoji": "💡"
+  },
+  {
+    "id": "060",
+    "text": "Turn off the lights",
+    "color": "blue",
+    "tags": ["request", "negative"],
+    "emoji": "💡"
+  },
+  {
+    "id": "061",
+    "text": "Dim the lights",
+    "color": "blue",
+    "tags": ["request", "negative"],
+    "emoji": "💡"
+  },
+  {
+    "id": "062",
+    "text": "Darker",
+    "color": "blue",
+    "tags": ["request", "negative"],
+    "emoji": "🔅"
+  },
+  {
+    "id": "063",
+    "text": "Brighter",
+    "color": "yellow",
+    "tags": ["request", "positive"],
+    "emoji": "🔆"
+  },
+  {
+    "id": "064",
+    "text": "Open the window shades",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🪟"
+  },
+  {
+    "id": "065",
+    "text": "Close the window shades",
+    "color": "blue",
+    "tags": ["request"],
+    "emoji": "🪟"
+  },
+  {
+    "id": "066",
+    "text": "I need a pillow",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🛏️"
+  },
+  {
+    "id": "067",
+    "text": "I need a blanket",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🛏️"
+  },
+  {
+    "id": "068",
+    "text": "Can you repeat that?",
+    "color": "purple",
+    "tags": ["request", "question"],
+    "emoji": "🔁"
+  },
+  {
+    "id": "069",
+    "text": "Can you say that again?",
+    "color": "purple",
+    "tags": ["request", "question"],
+    "emoji": "🔁"
+  },
+  {
+    "id": "070",
+    "text": "I am in pain",
+    "color": "red",
+    "tags": ["negative", "urgent", "feeling"],
+    "emoji": "💥"
+  },
+  {
+    "id": "071",
+    "text": "I am confused",
+    "color": "purple",
+    "tags": ["negative", "urgent", "feeling", "reaction"],
+    "emoji": "😵‍💫"
+  },
+  {
+    "id": "072",
+    "text": "I feel sick",
+    "color": "green",
+    "tags": ["negative", "urgent", "feeling", "reaction"],
+    "emoji": "🤒"
+  },
+  {
+    "id": "073",
+    "text": "I am excited",
+    "color": "yellow",
+    "tags": ["positive", "feeling", "reaction"],
+    "emoji": "😃"
+  },
+  {
+    "id": "074",
+    "text": "I need a tissue",
+    "color": "yellow",
+    "tags": ["request"],
+    "emoji": "🤧"
+  }
+]

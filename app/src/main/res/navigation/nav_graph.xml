@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phraseGroupFragment">
+
+    <fragment
+        android:id="@+id/phraseGroupFragment"
+        android:name="com.aaron.spique.ui.phrasegroups.PhraseGroupFragment"
+        android:label="PhraseGroupFragment" >
+        <action
+            android:id="@+id/action_phraseGroupFragment_to_singlePhraseGroupFragment"
+            app:destination="@id/singlePhraseGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePhraseGroupFragment"
+        android:name="com.aaron.spique.ui.phraselist.ui.view.SinglePhraseGroupFragment"
+        android:label="SinglePhraseGroupFragment" />
+</navigation>
