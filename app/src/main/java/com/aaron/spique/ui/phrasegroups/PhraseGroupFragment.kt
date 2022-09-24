@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -14,14 +13,16 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aaron.spique.R
 import com.aaron.spique.databinding.FragmentPhraseGroupBinding
-import com.aaron.spique.ui.phraselist.ui.view.phraserecyclerview.PhraseItemUiState
+import com.aaron.spique.ui.shared.recyclerview.phraserecyclerview.PhraseItemUiState
+import com.aaron.spique.ui.shared.SpeakingFragment
+import com.aaron.spique.ui.shared.recyclerview.phraserecyclerview.PhraseRecyclerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class PhraseGroupFragment : Fragment() {
+class PhraseGroupFragment : SpeakingFragment() {
 
-    private val viewModel: PhraseGroupViewModel by viewModels()
+    override val viewModel: PhraseGroupViewModel by viewModels()
     private lateinit var binding: FragmentPhraseGroupBinding
 
     override fun onCreateView(
@@ -38,7 +39,7 @@ class PhraseGroupFragment : Fragment() {
         binding.viewModel = viewModel
         val recyclerViewAdapter = PhraseGroupRecyclerAdapter(object : PhraseGroupRecyclerAdapter.PhraseGroupListener {
             override fun onItemClicked(item: PhraseItemUiState) {
-                //todo
+                viewModel.addUtterance(item.phrase, item.id)
             }
 
             override fun onMoreClicked(groupName: String) {
@@ -52,7 +53,11 @@ class PhraseGroupFragment : Fragment() {
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect {
-                    recyclerViewAdapter.update(it.groupList)
+                    recyclerViewAdapter.submitList(it.groupList)
+                    it.groupList.forEachIndexed { index, item ->
+                        val vh = binding.phraseGroupsRecyclerview.findViewHolderForAdapterPosition(index) as? PhraseGroupRecyclerAdapter.PhraseGroupViewHolder
+                        (vh?.binding?.phraseGroupRecyclerview?.adapter as? PhraseRecyclerAdapter)?.submitList(item.phraseItemList)
+                    }
                 }
             }
         }

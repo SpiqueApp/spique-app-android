@@ -5,10 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/phrase_background_drawable.xml" value="0.137" />
+        <entry key="app/src/main/res/drawable/phrase_background_selector.xml" value="0.2325" />
+        <entry key="app/src/main/res/drawable/selection_border.xml" value="0.2325" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19429347826086957" />
         <entry key="app/src/main/res/layout/activity_phrase_group.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_phrase_group.xml" value="0.32653985507246375" />
+        <entry key="app/src/main/res/layout/fragment_single_phrase.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/phrase_group_item.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/phrase_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/phrase_item.xml" value="0.25" />
       </map>
     </option>
   </component>

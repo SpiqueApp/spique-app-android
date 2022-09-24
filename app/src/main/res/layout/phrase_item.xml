@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="listener"
-            type="com.aaron.spique.ui.phraselist.ui.view.phraserecyclerview.PhraseRecyclerAdapter.Listener" />
+            type="com.aaron.spique.ui.shared.recyclerview.phraserecyclerview.PhraseRecyclerAdapter.Listener" />
+
         <variable
             name="model"
-            type="com.aaron.spique.ui.phraselist.ui.view.phraserecyclerview.PhraseItemUiState" />
+            type="com.aaron.spique.ui.shared.recyclerview.phraserecyclerview.PhraseItemUiState" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -21,26 +24,39 @@
         tools:cardBackgroundColor="@color/tile_blue">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_margin="4dp"
+            android:id="@+id/phrase_card_constraint_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/phrase_background_selector"
+            android:layout_margin="4dp">
+
+            <ImageView
+                android:id="@+id/speaker_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/audio_playing"
+                android:src="@drawable/speaker_24"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/label_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:gravity="bottom"
+                android:onClick="@{() -> listener.onItemClicked(model)}"
                 android:text="@{model.phrase}"
                 android:textColor="@color/white"
-                android:onClick="@{() -> listener.onItemClicked(model)}"
-                android:gravity="bottom"
-                android:layout_margin="8dp"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                app:layout_constraintDimensionRatio="2:1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="help" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

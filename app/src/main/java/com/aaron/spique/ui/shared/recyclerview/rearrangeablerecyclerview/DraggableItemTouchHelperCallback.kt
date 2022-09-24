@@ -3,8 +3,9 @@ package com.aaron.spique.ui.shared.recyclerview.rearrangeablerecyclerview
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.*
 import androidx.recyclerview.widget.RecyclerView
+import com.aaron.spique.ui.shared.recyclerview.baserecycleradapter.BaseRecyclerAdapter
 
-abstract class DraggableItemTouchHelperCallback<T, U : RecyclerView.ViewHolder>(
+abstract class DraggableItemTouchHelperCallback<T : BaseRecyclerAdapter.Item, U : RecyclerView.ViewHolder>(
     private val adapter: ReArrangeableRecyclerAdapter<T, U>
 ) : ItemTouchHelper.SimpleCallback(START or END or UP or DOWN, 0) {
 

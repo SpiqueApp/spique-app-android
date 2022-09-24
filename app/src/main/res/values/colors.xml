@@ -20,5 +20,6 @@
     <color name="tile_purple">#B186FD</color>
     <color name="tile_pink">#FF8BB3</color>
     <color name="tile_gray">#AAAAAA</color>
+    <color name="transparent">#00000000</color>
 
 </resources>
