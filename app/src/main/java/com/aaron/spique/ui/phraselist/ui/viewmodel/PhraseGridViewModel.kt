@@ -31,6 +31,7 @@ class PhraseGridViewModel @Inject constructor(
                             phrase = phrase,
                             isQueued = false,
                             isBeingSpoken = false,
+                            isFilteredOut = false,
                             color = color
                         )
                     }
@@ -66,7 +67,17 @@ class PhraseGridViewModel @Inject constructor(
         }
     }
 
+    fun filterItems(filterText: CharSequence?) {
+        filterText?.let { filter ->
+            _uiState.update { state ->
+                state.copy(phrases = state.phrases.map { phraseItem ->
+                    phraseItem.copy(isFilteredOut = !phraseItem.phrase.contains(filter))
+                })
+            }
+        }
+    }
+
     data class PhraseGridUiState(
-        val phrases: List<PhraseItemUiState> = listOf(),
+        val phrases: List<PhraseItemUiState> = listOf()
     )
 }

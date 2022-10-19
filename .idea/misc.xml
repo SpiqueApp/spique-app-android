@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/capsule.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/phrase_background_drawable.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/phrase_background_selector.xml" value="0.2325" />
@@ -14,6 +15,7 @@
         <entry key="app/src/main/res/layout/fragment_single_phrase.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/phrase_group_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/phrase_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/type_to_speak_layout.xml" value="0.379981884057971" />
       </map>
     </option>
   </component>

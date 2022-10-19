@@ -9,5 +9,6 @@ data class PhraseItemUiState(
     val phrase: String,
     val isQueued: Boolean,
     val isBeingSpoken: Boolean,
+    val isFilteredOut: Boolean,
     @ColorInt val color: Int
 ) : BaseRecyclerAdapter.Item()

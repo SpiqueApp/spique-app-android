@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -30,6 +31,7 @@ class PhraseGroupFragment : SpeakingFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = getString(R.string.phrase_group_fragment_title)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_phrase_group, container, false)
         return binding.root
     }
@@ -43,7 +45,7 @@ class PhraseGroupFragment : SpeakingFragment() {
             }
 
             override fun onMoreClicked(groupName: String) {
-                val direction = PhraseGroupFragmentDirections.actionPhraseGroupFragmentToSinglePhraseGroupFragment()
+                val direction = PhraseGroupFragmentDirections.actionPhraseGroupFragmentToSinglePhraseGroupFragment(groupName)
                 findNavController().navigate(direction)
             }
         })

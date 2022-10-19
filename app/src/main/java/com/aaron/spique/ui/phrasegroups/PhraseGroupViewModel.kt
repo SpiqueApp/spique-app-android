@@ -37,6 +37,7 @@ class PhraseGroupViewModel @Inject constructor(
                                 phrase = phraseModel.phrase,
                                 isQueued = false,
                                 isBeingSpoken = false,
+                                isFilteredOut = false,
                                 color = colorMapper.getColorFromString(phraseModel.color)
                             )
                         })

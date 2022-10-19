@@ -6,8 +6,7 @@
 
     <fragment
         android:id="@+id/phraseGroupFragment"
-        android:name="com.aaron.spique.ui.phrasegroups.PhraseGroupFragment"
-        android:label="PhraseGroupFragment" >
+        android:name="com.aaron.spique.ui.phrasegroups.PhraseGroupFragment">
         <action
             android:id="@+id/action_phraseGroupFragment_to_singlePhraseGroupFragment"
             app:destination="@id/singlePhraseGroupFragment"
@@ -18,6 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/singlePhraseGroupFragment"
-        android:name="com.aaron.spique.ui.phraselist.ui.view.SinglePhraseGroupFragment"
-        android:label="SinglePhraseGroupFragment" />
+        android:name="com.aaron.spique.ui.phraselist.ui.view.SinglePhraseGroupFragment">
+        <argument
+            android:name="groupName"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -5,11 +5,15 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.aaron.spique.R
 import com.aaron.spique.databinding.FragmentSinglePhraseBinding
@@ -27,6 +31,7 @@ class SinglePhraseGroupFragment : SpeakingFragment() {
 
     override val viewModel: PhraseGridViewModel by viewModels()
     private lateinit var binding: FragmentSinglePhraseBinding
+    private val args: SinglePhraseGroupFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,7 +44,6 @@ class SinglePhraseGroupFragment : SpeakingFragment() {
             container,
             false
         )
-        requireActivity().actionBar?.setDisplayHomeAsUpEnabled(true)
 
         return binding.root
     }
@@ -48,6 +52,7 @@ class SinglePhraseGroupFragment : SpeakingFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = args.groupName
 
         //TODO: seems like this num columns should be calculated different to account for large phones / tablets
         binding.phraseRecyclerView.layoutManager = VariableColumnGridLayoutManager(requireContext(), 70)
@@ -61,7 +66,7 @@ class SinglePhraseGroupFragment : SpeakingFragment() {
         lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect { state ->
-                    recyclerViewAdapter.submitList(state.phrases)
+                    recyclerViewAdapter.submitList(state.phrases.filter { !it.isFilteredOut })
                 }
             }
         }
@@ -77,5 +82,8 @@ class SinglePhraseGroupFragment : SpeakingFragment() {
 
         itemTouchHelper.attachToRecyclerView(binding.phraseRecyclerView)
 
+        binding.searchOrSpeakLayout.searchSpeechText.doOnTextChanged { filterText, _, _, _ ->
+            viewModel.filterItems(filterText)
+        }
     }
 }
